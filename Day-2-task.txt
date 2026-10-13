@@ -1,0 +1,411 @@
+1.Drivinglicense
+
+public class drivinglicense {
+    public static void main(String[] args) {
+        
+        int age = 19;
+        String eligible = (age >= 18) ? "yes" : "no";
+        System.out.println("Eligible: " + eligible);
+    }
+}
+
+
+2.Even Number and Range Checker
+
+import java.util.*;
+import java.util.Scanner;
+public class evennumberandrangechecker
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Enter a number: ");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        if (number % 2 == 0 && number >= 10)
+        {
+            System.out.println(number + " is an even number and greater than 10.");
+        }
+        else if (number % 2 == 0 && number <= 10)
+        {
+            System.out.println(number + " is  an even number and not greater than 10.");
+        }
+        else
+        {
+            System.out.println(number + " is not an even number and not greater than 10.");
+        }
+    }
+}
+
+
+3. Student Pass Checker
+
+
+import java.util.*;
+import java.util.Scanner;
+public class studentpasschecker
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your marks: ");
+        int marks = scanner.nextInt();
+        System.out.println("Enter your attendance percentage: ");
+        int attendance = scanner.nextInt();
+        
+        String n = (marks >= 40 && attendance >= 75) ? "pass" : "fail";
+        {
+            System.out.println("Result: " + n);
+        }
+    }
+}
+
+
+4.Shopping Discount Eligibility
+
+import java.util.*;
+import java.util.Scanner;
+public class shoppingdiscounteligibility
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Are you a premium member? (yes/no): ");
+        String premiummember = scanner.nextLine();
+        System.out.println("Enter your total purchase amount: ");
+        double purchaseAmount = scanner.nextDouble();
+        
+        String discountEligibility = (purchaseAmount >= 2000 || premiummember == "yes") ? "eligible for discount" : "not eligible for discount";
+        {
+            System.out.println("You are " + discountEligibility);
+        }
+    }
+}
+
+
+5.Password Length Validator
+
+import java.util.*;
+import java.util.Scanner;
+public class passwordlengthvalidator
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("your account is active or not (true/false): ");
+        boolean accountStatus = scanner.nextBoolean();
+        scanner.nextLine(); // Consume the newline character
+        System.out.println("Enter your password: ");
+        String password = scanner.nextLine();
+        
+        String result =  (password.length() >= 8 && accountStatus == true) ? "active" : "inactive" ;
+        {
+            System.out.println(result);
+        } 
+    }
+}
+
+
+6. ATM Withdrawal Validation
+
+import java.util.*;
+import java.util.Scanner;
+
+public class atmwithdrawalvalidation
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your account balance: ");
+        double accountBalance = scanner.nextDouble();
+        System.out.println("Enter the withdrawal amount: ");
+        double withdrawalAmount = scanner.nextDouble();
+        
+        String result = (withdrawalAmount % 100 == 0 && withdrawalAmount <= accountBalance) ? "Withdrawal successful" : "Insufficient funds";
+        {
+            System.out.println(result);
+        }
+    }
+}
+
+
+7.Login Attempt Controller
+
+import java.util.*;
+import java.util.Scanner;
+
+public class loginattemptcontroller
+{
+    public static void main (String[]args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your maximun attempts: ");
+        int maxattempts = scanner.nextInt();
+        System.out.println("Enter your failed attempts: ");
+        int failedattempts = scanner.nextInt();
+        String result = (failedattempts < maxattempts) ? "Login successful" : "Login failed";
+        {
+            System.out.println(result);
+            if(result.equals("Login failed"))
+            {
+                failedattempts++;
+                System.out.println("Failed attempts: " + failedattempts);
+            }
+        }    
+    }    
+}    
+
+
+8.Smart Battery Charging
+
+import java.util.*;
+import java.util.Scanner;
+
+public class smartbatterycharging
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the current battery percentage: ");
+        int batteryPercentage = scanner.nextInt();
+        System.out.println("Enter the Temperature :");
+        int temperature = scanner.nextInt();
+
+        String chargingStatus = (batteryPercentage < 90 && temperature < 45 && temperature > 10) ? "Charging allowed" : "Charging not allowed";
+        System.out.println("Battery Status: " + chargingStatus);
+        if (chargingStatus.equals("Charging allowed")) 
+        {
+           System.out.println(batteryPercentage+5);
+        
+        }
+    }
+}
+
+9.Online Order Free Delivery
+
+import java.util.*;
+import java.util.Scanner;
+public class onlineorderfreedelivery
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the total order amount: ");
+        double orderAmount = scanner.nextDouble();
+        System.out.println("are u a premium customer? (yes/no): ");
+        String isPremium = scanner.next();
+
+        String deliveryStatus = (orderAmount >= 1000 || isPremium.equals("yes")) ? "Free Delivery" : "Delivery Charges Apply";
+        System.out.println("Delivery Status: " + deliveryStatus);
+        if(deliveryStatus.equals("Delivery Charges Apply"))
+        {
+            System.out.println("Delivery Charges: "+(orderAmount+50));
+        }
+    }    
+    
+}
+
+
+10.Inventory Reorder Checker
+
+import java.util.*;
+import java.util.Scanner;
+public class inventoryreorderchecker
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the current stock quantity: ");
+        int stockQuantity = scanner.nextInt();
+        System.out.println("Enter the minimum stock level: ");
+        int minStockLevel = scanner.nextInt();
+        System.out.println("Enter the incoming stock quantity: ");
+        int incomingStock = scanner.nextInt();
+
+        int currentStock = stockQuantity + incomingStock; // Example reorder level calculation
+
+        String reorderStatus = (currentStock <= minStockLevel) ? "Reorder Required" : "Stock Sufficient";
+        System.out.println("Reorder Status: " + reorderStatus);
+    }    
+}
+
+
+11.Scholarship Eligibility
+
+import java.util.*;
+import java.util.Scanner;
+public class scholarshipeligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your mark: ");
+        double mark = sc.nextDouble();
+        System.out.println("Enter your family income: ");
+        double income = sc.nextDouble();
+        System.out.println("Enter extra-curricular activities (0-10): ");
+        int extraCurricular = sc.nextInt();
+
+        String award = (mark >= 95 && income <= 200000) ? "100% scholarship" : (mark >= 80 && income <= 400000 || mark >= 90 && extraCurricular >= 8) ? "50% scholarship" : (mark >= 75) ? "10% scholarship" : "No scholarship";
+        System.out.println("Scholarship Award: " + award);
+        }
+}
+
+
+12.Ride Fare Calculator
+
+
+import java.util.Scanner;
+
+public class rideFarecalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double distance, fare;
+        int waiting, extraTime;
+
+        System.out.print("Enter distance in km: ");
+        distance = sc.nextDouble();
+
+        System.out.print("Enter waiting time in minutes: ");
+        waiting = sc.nextInt();
+        sc.nextLine(); // Consume newline
+
+        System.out.print("Premium member? (Yes/No): ");
+        String premiumInput = sc.nextLine();
+
+        if (distance <= 0 || waiting < 0) {
+            System.out.println("Invalid input!");
+        } else {
+            extraTime = (waiting > 5) ? waiting - 5 : 0;
+
+            fare = 50;
+            fare += distance * 12;
+            fare += extraTime * 2;
+
+            fare = (premiumInput.equalsIgnoreCase("yes")
+                    && fare > 300) ? fare * 0.90 : fare;
+
+            System.out.printf("Total Ride Fare: Rs. %.2f%n", fare);
+        }
+
+        sc.close();
+    }
+}
+
+
+
+13.Employee Bonus Calculator
+
+
+import java.util.Scanner;
+
+public class employeebonuscalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double salary, bonus, finalSalary;
+        int score, projects, bonusPercent;
+
+        System.out.print("Enter employee salary: ");
+        salary = sc.nextDouble();
+
+        System.out.print("Enter performance score: ");
+        score = sc.nextInt();
+
+        System.out.print("Enter completed projects: ");
+        projects = sc.nextInt();
+
+        bonusPercent = (score >= 90 && projects >= 3) ? 15 :
+                       (score >= 75 || projects >= 5) ? 10 :
+                       (score >= 60) ? 3 : 0;
+
+        bonus = salary * bonusPercent / 100;
+        finalSalary = salary + bonus;
+
+        System.out.println("Bonus Percentage: " + bonusPercent + "%");
+        System.out.printf("Bonus Amount: Rs. %.2f%n", bonus);
+        System.out.printf("Final Salary: Rs. %.2f%n", finalSalary);
+
+        sc.close();
+    }
+}
+
+
+14.Secure Transaction Validator
+
+
+import java.util.Scanner;
+
+public class securetransactionvalidator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double balance, amount, dailyLimit;
+        boolean active;
+
+        System.out.print("Enter account balance: ");
+        balance = sc.nextDouble();
+
+        System.out.print("Enter transfer amount: ");
+        amount = sc.nextDouble();
+
+        System.out.print("Enter daily limit: ");
+        dailyLimit = sc.nextDouble();
+
+        System.out.print("Is account active? (true/false): ");
+        active = sc.nextBoolean();
+
+        if (amount > 0 && amount <= balance &&
+            amount <= dailyLimit && active) {
+
+            balance -= amount;
+            System.out.println("Transaction Successful!");
+        } else {
+            System.out.println("Transaction Failed!");
+        }
+
+        System.out.printf("Remaining Balance: Rs. %.2f%n", balance);
+
+        sc.close();
+    }
+}
+
+
+
+15.Smart Exam Registration System
+
+
+import java.util.Scanner;
+
+public class smartexamregistrationsystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double attendance;
+        boolean medicalCertificate, feePaid, assignmentsSubmitted;
+
+        System.out.print("Enter attendance percentage: ");
+        attendance = sc.nextDouble();
+
+        System.out.print("Medical certificate approved? (true/false): ");
+        medicalCertificate = sc.nextBoolean();
+
+        System.out.print("Examination fee paid? (true/false): ");
+        feePaid = sc.nextBoolean();
+
+        System.out.print("All assignments submitted? (true/false): ");
+        assignmentsSubmitted = sc.nextBoolean();
+
+        boolean eligible = (attendance >= 75 ||
+                           (attendance >= 65 && medicalCertificate))
+                           && feePaid && assignmentsSubmitted;
+
+        String result = eligible ? "Registration Successful"
+                                 : "Registration Rejected";
+
+        System.out.println(result);
+
+        sc.close();
+    }
+}
+
+
+
