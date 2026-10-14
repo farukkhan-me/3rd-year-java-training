@@ -1,0 +1,162 @@
+1.Personal Information
+
+import java.util.Scanner;
+
+public class personalinfo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+        
+        System.out.print("Enter your city: ");
+        String city = scanner.nextLine();
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("City: " + city);
+    }
+}
+
+
+2.Two-Number Calculator
+
+import java.util.Scanner;
+
+public class sumdiff {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        int sum = num1 + num2;
+        int difference = num1 - num2;
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+    }
+}
+
+3.Rectangle Calculator
+
+import java.util.*;
+import java.util.Scanner;
+public class rectanglecalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the length of the rectangle: ");
+        double length = scanner.nextDouble();
+
+        System.out.print("Enter the breadth of the rectangle: ");
+        double breadth = scanner.nextDouble();
+
+        double area = (length * breadth);
+        double perimeter = 2 * (length + breadth);
+        System.out.println("Area of the rectangle: " + area);
+        System.out.println("Perimeter of the rectangle: " + perimeter);
+    }
+}
+
+
+4.Student Marks
+
+import java.util.*;
+import java.util.Scanner;
+public class studentmarks
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your Name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter your mark in Tamil: ");
+        int tamilMarks = scanner.nextInt();
+
+        System.out.println("Enter your mark in English: ");
+        int englishMarks = scanner.nextInt();
+
+        System.out.println("Enter your mark in Maths: ");
+        int mathsMarks = scanner.nextInt();
+
+        System.out.println("Enter your mark in Science: ");
+        int scienceMarks = scanner.nextInt();
+
+        System.out.println("Enter your marks in Social: ");
+        int socialMarks = scanner.nextInt();
+
+        int totalMarks = tamilMarks + englishMarks + mathsMarks + scienceMarks + socialMarks;
+        int averageMarks = totalMarks / 5;
+
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Average Marks: " + averageMarks);
+        System.out.println("Student Name: " + name);
+    }
+}
+
+
+5.Employee Salary
+
+import java.util.*;
+import java.util.Scanner;
+public class employeesalary
+{
+    public static void main (String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your Name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter your basic salary: ");
+        float basicSalary = scanner.nextFloat();
+
+        System.out.println("Enter your bonus: ");
+        float bonus = scanner.nextFloat();
+
+        float totalSalary = (basicSalary + bonus);
+
+        System.out.println("Employee Name: " + name);
+        System.out.printf("Total Salary: %.2f", totalSalary);
+    }
+}
+
+
+6.Swap Two Numbers
+
+import java.util.*;
+import java.util.Scanner;
+public class swaptwonumbers
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the first number: ");
+        int firstNumber = scanner.nextInt();
+
+        System.out.println("Enter the second number: ");
+        int secondNumber = scanner.nextInt();
+
+        System.out.println("Before swapping: ");
+        System.out.println("First Number: " + firstNumber);     
+        System.out.println("Second Number: " + secondNumber);
+
+        int temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+
+        System.out.println("After swapping: ");
+        System.out.println("First Number: " + firstNumber); 
+        System.out.println("Second Number: " + secondNumber);
+    }   
+}
