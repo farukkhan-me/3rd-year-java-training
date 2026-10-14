@@ -1,0 +1,322 @@
+1.Greater than 100
+
+import java.util.*;
+public class greaterthan
+{
+    public static void main (String[] args)
+    {
+      int a = 1000;
+      if(a>100)
+      {
+        System.out.println("greater than 1000");
+      }  
+    }
+}
+
+
+2.Student scored atleast 50
+
+import java.util.*;
+public class atleast50
+{
+    public static void main (String[] args)
+    {
+      int a = 1000;
+      if(a>=50)
+      {
+        System.out.println("greater than or equal to 50");
+      }  
+    }
+}
+
+
+3.Divisible by 5
+
+import java.util.*;
+public class divby5
+{
+    public static void main (String[] args)
+    {
+      int a = 1000;
+      if(a%5==0)
+      {
+        System.out.println("divisible by 5");
+      }  
+    }
+}
+
+
+4.Eligible to Drive
+
+import java.util.*;
+public class eligible
+{
+    public static void main(String[]vargs)
+    {
+        int age = 34;
+        if(age>=18)
+        {
+            System.out.println("Eligible");
+        }
+    }
+}
+
+
+5.Number is positive or negative
+
+import java.util.*;
+public class posorneg
+{
+    public static void main(String[] args)
+    {
+        int a = 10;
+        if(a>=0)
+        {
+            System.out.println("positive");
+        }
+        else{
+            System.out.println("negative");
+        }
+    }
+}
+
+6.OddEven
+
+import java.util.*;
+public class oddeven
+{
+    public static void main(String[] args)
+    {
+        int num = 34;
+        if(num%2==0)
+        {
+            System.out.println("Even");
+        }
+        else
+        {
+            System.out.println("Odd");
+        }
+    }
+}
+
+
+7.Student passed or failed (pass mark 40)
+
+import java.util.*;
+
+public class passfail
+{
+    public static void main(String[] args)
+    {
+        int marks = 34;
+        if(marks>=40)
+        {
+            System.out.println("Pass");
+        }
+        else
+        {
+            System.out.println("Fail");
+        }
+    }
+}
+
+
+8.Greater of two number
+
+import java.util.*;
+public class greaternum
+{
+    public static void main(String[] args)
+    {
+        int num1 = 34;
+        int num2 = 45;
+        if(num1>num2)
+        {
+            System.out.println(num1+" is greater");
+        }
+        else
+        {
+            System.out.println(num2+" is greater");
+        }
+    }
+}
+
+
+9.grade
+
+import java.util.*;
+public class grade
+{
+    public static void main(String[] args)
+    {
+        int marks = 34;
+        if(marks>=90)
+        {
+            System.out.println("A grade");
+        }
+        else if(marks>=80)
+        {
+            System.out.println("B grade");
+        }
+        else if(marks>=70)
+        {
+            System.out.println("C grade");
+        }
+        else if(marks>=60)
+        {
+            System.out.println("D grade");
+        }
+        else
+        {
+            System.out.println("Fail");
+        }
+    }
+}
+
+
+10.Number is positive, negative or zero.
+
+import java.util.*;
+public class posnegzero
+{
+    public static void main(String[] args)
+    {
+        int num = 0;
+        if(num>0)
+        {
+            System.out.println("Positive");
+        }
+        else if(num<0)
+        {
+            System.out.println("Negative");
+        }
+        else
+        {
+            System.out.println("Zero");
+        }
+    }
+}
+
+
+11.Person age category.
+
+import java.util.*;
+public class agecat
+{
+    public static void main(String[] args)
+    {
+        int age = 34;
+        if(age>=0 && age<=12)
+        {
+            System.out.println("Child");
+        }
+        else if(age>=13 && age<=19)
+        {
+            System.out.println("Teenager");
+        }
+        else if(age>=20 && age<=59)
+        {
+            System.out.println("Adult");
+        }
+        else if(age>=60)
+        {
+            System.out.println("Senior Citizen");
+        }
+    }
+}
+
+
+12.Calculator accepts two number and operator and perform selected operation.
+
+import java.util.*;
+import java.util.Scanner;
+public class operation
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("first number: ");
+        int a = sc.nextInt();
+        System.out.println("second number: ");
+        int b = sc.nextInt();
+        System.out.println("Operations on (+, -, *, /) are: ");
+        String op = sc.next();
+
+        if(op.equals("+"))
+        {
+            System.out.println("Addition: "+(a+b));
+        }
+        else if(op.equals("-"))
+        {
+            System.out.println("Subtraction: "+(a-b));
+        }
+        else if(op.equals("*"))
+        {
+            System.out.println("Multiplication: "+(a*b));
+        }
+        else if(op.equals("/"))
+        {
+            System.out.println("Division: "+(a/b));
+        }
+        else
+        {
+            System.out.println("Invalid operation");
+        }
+    }
+}
+
+
+13.Leap year.
+
+import java.util.*;
+public class leap
+{
+    public static void main(String[] args)
+    {
+        int year = 2020;
+        if(year%400==0)
+        {
+            System.out.println("Leap year");
+        }
+        else if(year%4==0 && year%100!=0)
+        {
+            System.out.println("Leap year");
+        }
+        else
+        {
+            System.out.println("Not a leap year");
+        }
+    }
+}
+
+
+14.login.
+
+import java.util.*;
+public class login
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter username: ");
+        String username = sc.next();
+        System.out.println("Enter password: ");
+        String password = sc.next();
+
+        if(username.equals("admin"))
+        {
+            if(password.equals("admin123"))
+            {
+                System.out.println("Login successful");
+            }
+            else
+            {
+                System.out.println("Invalid password");
+            }
+        }
+        else
+        {
+            System.out.println("Invalid username");
+        }
+    }
+}
